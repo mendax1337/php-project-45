@@ -4,16 +4,21 @@
         "bin/brain-games"
     ],
     "description": "package for SM first project on hexlet",
-    "license": "proprietary",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": [
+            "src/Cli.php"
+        ]
     },
     "authors": [
         {
             "name": "mendax1337"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.4"
+    }
 }
