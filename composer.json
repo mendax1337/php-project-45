@@ -2,6 +2,7 @@
     "name": "hexlet/code",
     "bin": [
         "bin/brain-games"
+        "bin/brain-even"
     ],
     "description": "package for SM first project on hexlet",
     "license": "MIT",
