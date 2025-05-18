@@ -1,3 +1,5 @@
+### Asciinema with brain-even test:
+[![asciicast](https://asciinema.org/a/weKhsuYPrOLGO8hWIaZ1MOABk.svg)](https://asciinema.org/a/weKhsuYPrOLGO8hWIaZ1MOABk)
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/mendax1337/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mendax1337/php-project-45/actions)
 ### Sonarcloud badges:
