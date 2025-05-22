@@ -13,7 +13,7 @@ const MAX_VALUE = 99; #Максимальное значение для ранд
 function playEven(): void
 {
     $round = function () {
-        $randomNumb = rand(MIN_VALUE, MAX_VALUE); #Генерируем случайное число
+        $randomNumb = random_int(MIN_VALUE, MAX_VALUE); #Генерируем случайное число
         line("Question: {$randomNumb}");
         $answerOfUser = prompt('Your answer');
         $answerCorrect = $randomNumb % 2 === 0 ? 'yes' : 'no';

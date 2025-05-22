@@ -1,3 +1,4 @@
+.PHONY: brain-calc brain-even brain-games install validate lint dump-autoload
 install:
 	composer install
 
