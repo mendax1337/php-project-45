@@ -16,7 +16,7 @@ function runGame(string $description, callable $playGame): void
         [$question, $answer] = $playGame();
         line("Question: {$question}");
         $answerOfUser = prompt('Your answer');
-        if ($answerOfUser !== $answer) {
+        if ($answerOfUser !== (string) $answer) {
             line("'{$answerOfUser}' is wrong answer ;(. Correct answer was '{$answer}'");
             line("Let's try again, {$name}!");
             return;
