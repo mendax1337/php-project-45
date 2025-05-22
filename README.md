@@ -1,3 +1,23 @@
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/mendax1337/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mendax1337/php-project-45/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/085523e5fbcf05fe0be2/maintainability)](https://codeclimate.com/github/mendax1337/php-project-45/maintainability)
+
+### Prerequisites
+
+* PHP >= 8.3.6
+
+### About
+
+Educational project on PHP
+
+### Setup
+
+```bash
+git clone git@github.com:mendax1337/php-project-45.git
+cd php-project-45
+
+make install
+```
 ### Asciinema with brain-even test:
 [![asciicast](https://asciinema.org/a/719891.svg)](https://asciinema.org/a/719891)
 ### Asciinema with brain-calc test:
@@ -8,8 +28,7 @@
 [![asciicast](https://asciinema.org/a/720463.svg)](https://asciinema.org/a/720463)
 ### Asciinema with brain-prime test:
 [![asciicast](https://asciinema.org/a/720468.svg)](https://asciinema.org/a/720468)
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/mendax1337/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mendax1337/php-project-45/actions)
+
 ### Sonarcloud badges:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mendax1337_php-project-45&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=mendax1337_php-project-45)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=mendax1337_php-project-45&metric=bugs)](https://sonarcloud.io/summary/new_code?id=mendax1337_php-project-45)
