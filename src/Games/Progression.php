@@ -28,9 +28,9 @@ function playProgression(): void
 function generateProgression(): array
 {
     $numbers = [];
-    $length = rand(MIN_LENGTH, MAX_LENGTH);
-    $step = rand(MIN_STEP, MAX_STEP);
-    $firstElement = rand(MIN_FIRST_ELEMENT, MAX_FIRST_ELEMENT);
+    $length = random_int(MIN_LENGTH, MAX_LENGTH);
+    $step = random_int(MIN_STEP, MAX_STEP);
+    $firstElement = random_int(MIN_FIRST_ELEMENT, MAX_FIRST_ELEMENT);
     for ($i = 0; $i < $length; $i++) {
         $numbers[$i] = $firstElement + $i * $step;
     }
