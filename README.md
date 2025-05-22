@@ -1,5 +1,5 @@
 ### Asciinema with brain-even test:
-[![asciicast](https://asciinema.org/a/weKhsuYPrOLGO8hWIaZ1MOABk.svg)](https://asciinema.org/a/weKhsuYPrOLGO8hWIaZ1MOABk)
+[![asciicast](https://asciinema.org/a/719891.svg)](https://asciinema.org/a/719891)
 ### Asciinema with brain-calc test:
 [![asciicast](https://asciinema.org/a/720322.svg)](https://asciinema.org/a/720322)
 ### Hexlet tests and linter status:
