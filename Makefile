@@ -1,4 +1,4 @@
-.PHONY: brain-calc brain-even brain-games install validate lint dump-autoload
+.PHONY: brain-calc brain-gcd brain-even brain-games install validate lint dump-autoload
 install:
 	composer install
 
@@ -10,6 +10,9 @@ brain-even:
 
 brain-calc:
 	./bin/brain-calc
+
+brain-gcd:
+	./bin/brain-gcd
 
 validate:
 	composer validate
