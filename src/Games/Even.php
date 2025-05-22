@@ -2,23 +2,19 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\executeGameTemplate;
-use function cli\line;
-use function cli\prompt;
+use function BrainGames\Engine\runGame;
 
-const DESCRIPTION_OF_GAME = 'Answer "yes" if the number is even, otherwise answer "no".'; #Описание игры
-const MIN_VALUE = 1; #Минимальное значение для рандомного числа
-const MAX_VALUE = 99; #Максимальное значение для рандомного числа
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+const MIN_VALUE = 1;
+const MAX_VALUE = 99;
 
 function playEven(): void
 {
-    $round = function () {
-        $randomNumb = random_int(MIN_VALUE, MAX_VALUE); #Генерируем случайное число
-        line("Question: {$randomNumb}");
-        $answerOfUser = prompt('Your answer');
-        $answerCorrect = $randomNumb % 2 === 0 ? 'yes' : 'no';
+    $playRound = function () {
+        $question = $randomNumber = random_int(MIN_VALUE, MAX_VALUE);
+        $answer = $randomNumber % 2 === 0 ? 'yes' : 'no';
 
-        return [$answerOfUser, $answerCorrect];
+        return [$question, $answer];
     };
-    executeGameTemplate(DESCRIPTION_OF_GAME, $round);
+    runGame(DESCRIPTION, $playRound);
 }

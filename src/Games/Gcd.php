@@ -2,29 +2,32 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Engine\executeGameTemplate;
-use function cli\line;
-use function cli\prompt;
+use function BrainGames\Engine\runGame;
 
-const DESCRIPTION_OF_GAME = 'Find the greatest common divisor of given numbers.'; #Описание игры
-const MIN_VALUE = 1; #Минимальное значение для рандомного числа
-const MAX_VALUE = 99; #Максимальное значение для рандомного числа
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
+const MIN_VALUE = 1;
+const MAX_VALUE = 99;
 
 function playGcd(): void
 {
-    $round = function () {
-        $randomNumb1 = random_int(MIN_VALUE, MAX_VALUE);
-        $randomNumb2 = random_int(MIN_VALUE, MAX_VALUE);
-        line("Question: {$randomNumb1} {$randomNumb2}");
-        $answerOfUser = (int) prompt('Your answer');
-        $result = 0;
-        while ($randomNumb2 > 0) {
-            $result = $randomNumb1 % $randomNumb2;
-            $randomNumb1 = $randomNumb2;
-            $randomNumb2 = $result;
-        }
-        $answerCorrect = $randomNumb1;
-        return [$answerOfUser, $answerCorrect];
+    $playRound = function () {
+        $randomNumber1 = random_int(MIN_VALUE, MAX_VALUE);
+        $randomNumber2 = random_int(MIN_VALUE, MAX_VALUE);
+        $question = "{$randomNumber1} {$randomNumber2}";
+        $randomNumber1 = searchGcd($randomNumber1, $randomNumber2);
+        $answer = $randomNumber1;
+        return [$question, $answer];
     };
-    executeGameTemplate(DESCRIPTION_OF_GAME, $round);
+    runGame(DESCRIPTION, $playRound);
+}
+
+function searchGcd(int $randomNumber1, int $randomNumber2): int
+{
+    while ($randomNumber2 > 0) {
+        $result = 0;
+        $result = $randomNumber1 % $randomNumber2;
+        $randomNumber1 = $randomNumber2;
+        $randomNumber2 = $result;
+    }
+    return $randomNumber1;
 }

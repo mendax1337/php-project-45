@@ -4,6 +4,8 @@
 [![asciicast](https://asciinema.org/a/720322.svg)](https://asciinema.org/a/720322)
 ### Asciinema with brain-gcd test:
 [![asciicast](https://asciinema.org/a/720433.svg)](https://asciinema.org/a/720433)
+### Asciinema with brain-progression test:
+[![asciicast](https://asciinema.org/a/720463.svg)](https://asciinema.org/a/720463)
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/mendax1337/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mendax1337/php-project-45/actions)
 ### Sonarcloud badges:

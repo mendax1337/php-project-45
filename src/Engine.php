@@ -4,25 +4,24 @@ namespace BrainGames\Engine;
 
 use function BrainGames\Cli\welcome;
 use function cli\line;
+use function cli\prompt;
 
-const NUMBER_OF_ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
-function executeGameTemplate(string $descriptionOfGame, callable $functionOfGame): void
+function runGame(string $description, callable $playGame): void
 {
     $name = welcome();
-    line($descriptionOfGame);
-
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
-        
-        [$answerOfUser, $answerCorrect] = $functionOfGame();
-        if ($answerOfUser === $answerCorrect) {
-            line('Correct!');
-        } else {
-            line("'{$answerOfUser}' is wrong answer ;(. Correct answer was '{$answerCorrect}'");
-            line("Let's try again, {$name}");
+    line($description);
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        [$question, $answer] = $playGame();
+        line("Question: {$question}");
+        $answerOfUser = prompt('Your answer');
+        if ($answerOfUser != $answer) {
+            line("'{$answerOfUser}' is wrong answer ;(. Correct answer was '{$answer}'");
+            line("Let's try again, {$name}!");
             return;
         }
+        line('Correct!');
     }
-    line("Congratulations, {$name}");
-    return;
+    line("Congratulations, {$name}!");
 }
